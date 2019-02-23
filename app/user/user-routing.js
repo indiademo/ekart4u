@@ -1,21 +1,13 @@
-'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+import express from 'express';
 
-var _express = require('express');
+import { default as user } from './user-ctrl'
 
-var _express2 = _interopRequireDefault(_express);
 
-var _userCtrl = require('./user-ctrl');
+let router = express.Router();
 
-var _userCtrl2 = _interopRequireDefault(_userCtrl);
+router.get('/api/getUser',user.getuser)
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var router = _express2.default.Router();
 
-router.get('/api/getUser', _userCtrl2.default.getuser);
-
-exports.default = router;
+export default router;
