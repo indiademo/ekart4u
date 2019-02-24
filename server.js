@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/ok', function(req, res) {
-    var res = {
+    var data = {
         "userId": 1,
         "id": 1,
         "title": "delectus aut autem",
@@ -23,7 +23,7 @@ app.get('/ok', function(req, res) {
     res.json({
         status:'200',
         message:'sucess',
-        data:res
+        data:data
     });
 });
 app.listen(PORT,function(){
