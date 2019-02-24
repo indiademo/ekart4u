@@ -13,6 +13,19 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+app.get('/ok', function(req, res) {
+    var res = {
+        "userId": 1,
+        "id": 1,
+        "title": "delectus aut autem",
+        "completed": false
+      }
+    res.json({
+        status:'200',
+        message:'sucess',
+        data:res
+    });
+});
 app.listen(PORT,function(){
     console.log("2244")
 })
